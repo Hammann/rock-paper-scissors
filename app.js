@@ -25,6 +25,8 @@ function win(userChoice, computerChoice) {
     const smallComputerWord = "comp".fontsize(3).sup();
     const userChoice_div = document.getElementById(userChoice);
     userScore++;
+    userScore_span.innerHTML = userScore; 
+    computerScore_span.innerHTML = computerScore;
     result_p.innerHTML = `${convertToWord(userChoice)}${smallUserWord} beats ${convertToWord(computerChoice)}${smallComputerWord} - You won!  🔥`;
     document.getElementById(userChoice).classList.add('green-glow');
     setTimeout(() => userChoice_div.classList.remove('green-glow'), 275);
